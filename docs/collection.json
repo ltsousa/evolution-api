@@ -1,0 +1,237 @@
+{
+  "_type": "request_collection",
+  "name": "Evolution API Bot",
+  "description": "Collection para testar a API do Evolution API Bot",
+  "requests": [
+    {
+      "_type": "request",
+      "name": "Health Check",
+      "url": "{{base_url}}/healthz",
+      "method": "GET",
+      "description": "Verifica se a aplicação está funcionando"
+    },
+    {
+      "_type": "request",
+      "name": "Get Info",
+      "url": "{{base_url}}/info",
+      "method": "GET",
+      "description": "Obtém informações e estatísticas da aplicação"
+    },
+    {
+      "_type": "request",
+      "name": "Ensure Instance",
+      "url": "{{base_url}}/instance/ensure",
+      "method": "POST",
+      "description": "Garante que a instância WhatsApp existe e está rodando",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{internal_token}}"
+        }
+      ]
+    },
+    {
+      "_type": "request",
+      "name": "Get QR Code",
+      "url": "{{base_url}}/instance/qr",
+      "method": "GET",
+      "description": "Obtém QR code para conectar WhatsApp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{internal_token}}"
+        }
+      ]
+    },
+    {
+      "_type": "request",
+      "name": "Get Instance Status",
+      "url": "{{base_url}}/instance/status",
+      "method": "GET",
+      "description": "Obtém status atual da instância",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{internal_token}}"
+        }
+      ]
+    },
+    {
+      "_type": "request",
+      "name": "Send Message",
+      "url": "{{base_url}}/messages/send",
+      "method": "POST",
+      "description": "Envia mensagem programaticamente",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{internal_token}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mode": "json",
+        "json": {
+          "to": "5511999999999",
+          "text": "Olá! Esta é uma mensagem de teste.",
+          "reply_to": null
+        }
+      }
+    },
+    {
+      "_type": "request",
+      "name": "Get Message Stats",
+      "url": "{{base_url}}/messages/stats",
+      "method": "GET",
+      "description": "Obtém estatísticas de mensagens",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{internal_token}}"
+        }
+      ]
+    },
+    {
+      "_type": "request",
+      "name": "Webhook Test",
+      "url": "{{base_url}}/webhook/",
+      "method": "POST",
+      "description": "Testa o webhook com payload de exemplo",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "X-Request-ID",
+          "value": "test-{{$timestamp}}"
+        }
+      ],
+      "body": {
+        "mode": "json",
+        "json": {
+          "event": "messages.upsert",
+          "instance": "whatsapp-teste",
+          "data": {
+            "data": {
+              "key": {
+                "id": "test_message_id",
+                "remoteJid": "5511999999999@s.whatsapp.net",
+                "fromMe": false
+              },
+              "message": {
+                "conversation": "Olá, como você está?"
+              },
+              "messageTimestamp": "1703123456",
+              "type": "text"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "environments": [
+    {
+      "_type": "environment",
+      "name": "Local Development",
+      "data": [
+        {
+          "key": "base_url",
+          "value": "http://localhost:8080"
+        },
+        {
+          "key": "internal_token",
+          "value": "seu-token-interno-aqui"
+        }
+      ]
+    },
+    {
+      "_type": "environment",
+      "name": "Production",
+      "data": [
+        {
+          "key": "base_url",
+          "value": "https://seu-servidor.com"
+        },
+        {
+          "key": "internal_token",
+          "value": "seu-token-producao-aqui"
+        }
+      ]
+    }
+  ],
+  "folders": [
+    {
+      "_type": "request_folder",
+      "name": "Public Endpoints",
+      "description": "Endpoints públicos da aplicação",
+      "requests": [
+        {
+          "_type": "request",
+          "name": "Health Check",
+          "url": "{{base_url}}/healthz",
+          "method": "GET"
+        },
+        {
+          "_type": "request",
+          "name": "Get Info",
+          "url": "{{base_url}}/info",
+          "method": "GET"
+        },
+        {
+          "_type": "request",
+          "name": "Webhook Test",
+          "url": "{{base_url}}/webhook/",
+          "method": "POST"
+        }
+      ]
+    },
+    {
+      "_type": "request_folder",
+      "name": "Instance Management",
+      "description": "Gerenciamento de instâncias WhatsApp",
+      "requests": [
+        {
+          "_type": "request",
+          "name": "Ensure Instance",
+          "url": "{{base_url}}/instance/ensure",
+          "method": "POST"
+        },
+        {
+          "_type": "request",
+          "name": "Get QR Code",
+          "url": "{{base_url}}/instance/qr",
+          "method": "GET"
+        },
+        {
+          "_type": "request",
+          "name": "Get Instance Status",
+          "url": "{{base_url}}/instance/status",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "_type": "request_folder",
+      "name": "Messages",
+      "description": "Envio e gerenciamento de mensagens",
+      "requests": [
+        {
+          "_type": "request",
+          "name": "Send Message",
+          "url": "{{base_url}}/messages/send",
+          "method": "POST"
+        },
+        {
+          "_type": "request",
+          "name": "Get Message Stats",
+          "url": "{{base_url}}/messages/stats",
+          "method": "GET"
+        }
+      ]
+    }
+  ]
+}
