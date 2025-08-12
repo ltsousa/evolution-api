@@ -152,3 +152,12 @@ logs/
 
 # Anotacao
 anotacao.md
+evolution/lib64
+evolution/pyvenv.cfg
+evolution/bin/activate
+evolution/bin/activate.csh
+evolution/bin/activate.fish
+evolution/bin/Activate.ps1
+evolution/bin/python
+evolution/bin/python3
+evolution/bin/python3.12

@@ -1,6 +1,6 @@
 """Cliente para OpenAI API."""
 from typing import Dict, Optional
-import openai
+from openai import AsyncOpenAI
 import structlog
 from tenacity import retry, stop_after_attempt, wait_exponential
 
@@ -9,7 +9,7 @@ from .config import settings
 logger = structlog.get_logger()
 
 # Configurar OpenAI
-openai.api_key = settings.openai_api_key
+openai_client = AsyncOpenAI(api_key=settings.openai_api_key)
 
 
 class OpenAIClient:
@@ -35,7 +35,7 @@ class OpenAIClient:
             
             messages.append({"role": "user", "content": user_text})
             
-            response = await openai.ChatCompletion.acreate(
+            response = await openai_client.chat.completions.create(
                 model=self.model,
                 messages=messages,
                 max_tokens=500,

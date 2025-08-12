@@ -1,9 +1,10 @@
-"""Roteador para webhooks da Evolution API."""
+"""Webhook para receber mensagens da Evolution API."""
 import time
 from datetime import datetime
-from typing import Any, Dict
+from typing import Dict, Any
 from fastapi import APIRouter, Request, HTTPException, Depends
 import structlog
+import asyncio
 
 from .models import WebhookPayload, IncomingMessage
 from .evolution_client import EvolutionClient
@@ -79,13 +80,19 @@ async def webhook_handler(
 async def _process_message(data: Dict[str, Any], request_id: str) -> None:
     """Processa mensagem recebida."""
     try:
+        print(f"🔍 PROCESSANDO MENSAGEM: {data}")  # Log simples para debug
+        logger.info("Processando mensagem recebida", data=data, request_id=request_id)
+        
         # Extrair dados da mensagem
         message_data = data.get("data", {})
         
         # Verificar se é mensagem de texto
         if message_data.get("type") != "text":
+            print(f"❌ MENSAGEM NÃO É DE TEXTO: {message_data.get('type')}")
             logger.debug("Mensagem não é de texto", type=message_data.get("type"))
             return
+        
+        print(f"✅ MENSAGEM É DE TEXTO: {message_data.get('type')}")
         
         # Normalizar para DTO interno
         message = IncomingMessage(
@@ -100,37 +107,60 @@ async def _process_message(data: Dict[str, Any], request_id: str) -> None:
             raw_data=data
         )
         
+        print(f"✅ MENSAGEM NORMALIZADA: {message.text}")
+        
         # Verificar idempotência
         if await idempotency_manager.is_duplicate(message.id):
+            print(f"❌ MENSAGEM DUPLICADA: {message.id}")
             logger.info("Mensagem duplicada ignorada", message_id=message.id)
             return
         
+        print(f"✅ MENSAGEM NÃO É DUPLICADA: {message.id}")
+        
         # Gerar resposta com OpenAI
+        print(f"🤖 GERANDO RESPOSTA COM IA...")
         reply_text = await openai_client.generate_reply(
             message.text or "",
             context={"conversation": f"Usuário: {message.text}"}
         )
         
+        print(f"✅ RESPOSTA GERADA: {reply_text[:100]}...")
+        
         # Enviar resposta via Evolution
+        print(f"📤 ENVIANDO RESPOSTA VIA EVOLUTION...")
         await evolution_client.send_text(
             to=message.from_number,
             text=reply_text,
             reply_to=message.id
         )
         
+        print(f"✅ RESPOSTA ENVIADA")
+        
         # Marcar chat como não lido para o usuário
+        print(f"🔴 MARCANDO CHAT COMO NÃO LIDO...")
         try:
+            # Estratégia: Aguardar um pouco para contornar o comportamento do WhatsApp
+            print(f"⏳ Aguardando 5 segundos antes de marcar como não lido...")
+            await asyncio.sleep(5)
+            
+            # Corrigir: remover @s.whatsapp.net e usar message_id único
+            clean_number = message.from_number.replace("@s.whatsapp.net", "")
+            unique_message_id = f"webhook_{int(time.time())}"
+            
             await evolution_client.mark_chat_unread(
-                number=message.from_number,
+                number=clean_number,
                 last_message=reply_text,
-                message_id=message.id
+                message_id=unique_message_id
             )
+            print(f"✅ CHAT MARCADO COMO NÃO LIDO - Número: {clean_number}, ID: {unique_message_id}")
             logger.info(
                 "Chat marcado como não lido",
-                number=message.from_number,
+                number=clean_number,
+                message_id=unique_message_id,
                 request_id=request_id
             )
         except Exception as e:
+            print(f"❌ ERRO AO MARCAR COMO NÃO LIDO: {e}")
             logger.warning(
                 "Erro ao marcar chat como não lido",
                 number=message.from_number,
