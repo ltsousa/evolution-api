@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Report - Raffles and Experiences Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-brand">🎯 Raffles and Experiences Management</a>
+            <div class="navbar-actions">
+                <a href="index.html" class="btn btn-outline">← Back to Hub</a>
+                <a href="journey-output.html" class="btn btn-outline">Journey</a>
+                <a href="pain-report.html" class="btn btn-outline">Pain Points</a>
+                <button class="btn btn-primary" onclick="window.print()">
+                    <i class="fas fa-download"></i> Export Report
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <ol>
+                    <li><a href="index.html">Documentation Hub</a></li>
+                    <li>→</li>
+                    <li>Problem Report</li>
+                </ol>
+            </nav>
+
+            <!-- Hero Section -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="report-icon critical" style="float: left; margin-right: 1rem;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h1>🔥 Problem Report: Business Challenge Analysis</h1>
+                    <p class="card-subtitle">
+                        Comprehensive analysis of the scalability crisis threatening the Raffles and Experiences Management system
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="status-indicator status-critical">🔴 Critical Priority</span>
+                        <span class="status-indicator status-high">⚡ High Business Impact</span>
+                        <span class="status-indicator status-warning">💰 $550K-850K Investment Required</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Executive Summary -->
+            <section id="executive-summary" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📋 Executive Summary</h2>
+                    </div>
+                    <div class="highlight">
+                        <p><strong>O aplicativo enfrenta uma crise de escalabilidade em seus processos de Experiências e Sorteios que ameaça o crescimento do programa de benefícios.</strong> O problema central reside na dependência excessiva de processos manuais que tornam impossível escalar operações além de 100-200 transações simultâneas, limitando drasticamente o potencial de crescimento do negócio.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Business Context -->
+            <section id="business-context" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>💼 Business Context</h2>
+                    </div>
+
+                    <h3>Strategic Importance</h3>
+                    <p>Os processos de Experiências e Sorteios são <strong>diferenciadores competitivos</strong> críticos que:</p>
+                    <ul>
+                        <li><strong>Aumentam engagement</strong> dos usuários no aplicativo</li>
+                        <li><strong>Promovem retenção</strong> através de benefícios tangíveis</li>
+                        <li><strong>Geram valor percebido</strong> pelos pontos acumulados</li>
+                        <li><strong>Fortalecem brand loyalty</strong> através de experiências exclusivas</li>
+                    </ul>
+
+                    <h3>Current Volume & Growth Trajectory</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Métrica</th>
+                                    <th>Estado Atual</th>
+                                    <th>Projeção 12 meses</th>
+                                    <th>Gap</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Experiências/mês</strong></td>
+                                    <td>~300-500</td>
+                                    <td>2000-3000</td>
+                                    <td><span class="status-indicator status-critical">4-6x crescimento</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sorteios/mês</strong></td>
+                                    <td>~5-10</td>
+                                    <td>20-30</td>
+                                    <td><span class="status-indicator status-critical">3-4x crescimento</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ganhadores simultâneos</strong></td>
+                                    <td>&lt;100</td>
+                                    <td>500-1000+</td>
+                                    <td><span class="status-indicator status-critical">5-10x crescimento</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Equipe necessária (modelo atual)</strong></td>
+                                    <td>3-4 pessoas</td>
+                                    <td>15-20 pessoas</td>
+                                    <td><span class="status-indicator status-danger">Insustentável</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problem Statement -->
+            <section id="problem-statement" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🚨 Problem Statement</h2>
+                    </div>
+
+                    <div class="highlight">
+                        <h3>Core Issue: Manual Dependency Crisis</h3>
+                        <p><strong>O problema fundamental é que 95% dos processos críticos dependem de intervenção manual humana, criando um gargalo operacional que impede o crescimento do negócio.</strong></p>
+                    </div>
+
+                    <h3>Manifestações do Problema:</h3>
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h4>🚫 Impossibilidade de Escalar Volume</h4>
+                            <ul>
+                                <li><strong>Manual:</strong> Processo atual para 500 ganhadores levaria semanas</li>
+                                <li><strong>Automático:</strong> Deveria ser processado em horas/minutos</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h4>⚠️ Alto Risco Operacional</h4>
+                            <ul>
+                                <li>Single points of failure (estagiária, planilhas)</li>
+                                <li>Dependência de conhecimento tácito individual</li>
+                                <li>Processo suscetível a erros humanos</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h4>😞 Experiência do Usuário Deteriorada</h4>
+                            <ul>
+                                <li>Atrasos de 3-10 dias entre ação e benefício</li>
+                                <li>Comunicação fragmentada e não oficial</li>
+                                <li>Desconfiança sobre legitimidade</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h4>💸 Custo Operacional Insustentável</h4>
+                            <ul>
+                                <li>Crescimento linear de equipe com volume</li>
+                                <li>80% do tempo gasto em tarefas repetitivas</li>
+                                <li>ROI decrescente com escala</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Business Impact Assessment -->
+            <section id="business-impact" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📊 Business Impact Assessment</h2>
+                    </div>
+
+                    <h3>🔴 High-Impact Risks (Immediate)</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Risk</th>
+                                    <th>Probability</th>
+                                    <th>Impact</th>
+                                    <th>Business Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Growth Limitation Risk</strong></td>
+                                    <td><span class="status-indicator status-critical">95%</span></td>
+                                    <td>Impossibilidade de crescer programa de benefícios</td>
+                                    <td>Oportunidade perdida de $2-5M/ano</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Operational Failure Risk</strong></td>
+                                    <td><span class="status-indicator status-high">70%</span></td>
+                                    <td>Incapacidade de processar demanda</td>
+                                    <td>Perda de usuários, deterioração de NPS</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Brand Damage Risk</strong></td>
+                                    <td><span class="status-indicator status-medium">60%</span></td>
+                                    <td>Usuários bloqueiam comunicação oficial</td>
+                                    <td>Erosão de confiança, word-of-mouth negativo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Competitive Landscape -->
+            <section id="competitive-landscape" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🏆 Competitive Landscape</h2>
+                    </div>
+
+                    <h3>Industry Benchmarks</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Capability</th>
+                                    <th>Industry Standard</th>
+                                    <th>Current State</th>
+                                    <th>Gap</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Time to Delivery</strong></td>
+                                    <td>&lt;1 hour</td>
+                                    <td>3-10 days</td>
+                                    <td><span class="status-indicator status-danger">⚠️ 50-200x slower</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Automation Level</strong></td>
+                                    <td>80-90%</td>
+                                    <td>5-10%</td>
+                                    <td><span class="status-indicator status-danger">⚠️ 70-80% gap</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Volume Capacity</strong></td>
+                                    <td>10,000+ simultaneous</td>
+                                    <td>&lt;100</td>
+                                    <td><span class="status-indicator status-danger">⚠️ 100x limitation</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Error Rate</strong></td>
+                                    <td>&lt;1%</td>
+                                    <td>15-20%</td>
+                                    <td><span class="status-indicator status-danger">⚠️ 15-20x higher</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="highlight">
+                        <h4>Competitive Risk</h4>
+                        <p><strong>Competitors com automação superior podem:</strong></p>
+                        <ul>
+                            <li>Processar 100x mais volume</li>
+                            <li>Entregar benefícios instantaneamente</li>
+                            <li>Oferecer experiência superior</li>
+                            <li>Capturar market share rapidamente</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Financial Impact Analysis -->
+            <section id="financial-impact" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>💰 Financial Impact Analysis</h2>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h3>📉 Cost of Inaction (Annual)</h3>
+                            <h4>Direct Costs</h4>
+                            <ul>
+                                <li><strong>Team scaling:</strong> $300K-500K additional headcount</li>
+                                <li><strong>Error handling:</strong> $100K-200K customer service/remediation</li>
+                                <li><strong>Opportunity cost:</strong> $2M-5M restricted program growth</li>
+                            </ul>
+                            <h4>Indirect Costs</h4>
+                            <ul>
+                                <li><strong>User churn:</strong> 10-20% due to poor experience</li>
+                                <li><strong>Brand damage:</strong> Unmeasurable but significant</li>
+                                <li><strong>Competitive loss:</strong> Market position deterioration</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h3>💡 Solution Investment</h3>
+                            <ul>
+                                <li><strong>Development:</strong> $450K-650K (18-24 months)</li>
+                                <li><strong>Infrastructure:</strong> $50K-100K (cloud, integrations)</li>
+                                <li><strong>Change Management:</strong> $50K-100K (training, adoption)</li>
+                                <li><strong>Total:</strong> <span class="status-indicator status-warning">$550K-850K</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>📈 ROI Projection</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Investment</th>
+                                    <th>Savings</th>
+                                    <th>Net Impact</th>
+                                    <th>ROI</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Year 1</strong></td>
+                                    <td>$400K</td>
+                                    <td>$200K</td>
+                                    <td>-$200K</td>
+                                    <td><span class="status-indicator status-danger">-50%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Year 2</strong></td>
+                                    <td>$300K</td>
+                                    <td>$600K</td>
+                                    <td>+$300K</td>
+                                    <td><span class="status-indicator status-warning">+43%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Year 3</strong></td>
+                                    <td>$100K</td>
+                                    <td>$1,200K</td>
+                                    <td>+$1,100K</td>
+                                    <td><span class="status-indicator status-success">+183%</span></td>
+                                </tr>
+                                <tr style="background: #fafafa;">
+                                    <td><strong>3-Year Total</strong></td>
+                                    <td>$800K</td>
+                                    <td>$2,000K</td>
+                                    <td>+$1,200K</td>
+                                    <td><span class="status-indicator status-success"><strong>+150%</strong></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Options -->
+            <section id="strategic-options" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🎯 Strategic Options</h2>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h3>❌ Option 1: Status Quo (Do Nothing)</h3>
+                            <ul>
+                                <li><strong>Investment:</strong> $0</li>
+                                <li><strong>Outcome:</strong> Growth limitation, competitive disadvantage</li>
+                                <li><strong>Risk:</strong> High probability of business failure in segment</li>
+                            </ul>
+                            <span class="status-indicator status-danger">❌ NOT RECOMMENDED</span>
+                        </div>
+
+                        <div class="card">
+                            <h3>⚠️ Option 2: Incremental Improvements</h3>
+                            <ul>
+                                <li><strong>Investment:</strong> $150K-250K</li>
+                                <li><strong>Outcome:</strong> Marginal efficiency gains</li>
+                                <li><strong>Risk:</strong> Insufficient for growth trajectory</li>
+                            </ul>
+                            <span class="status-indicator status-warning">❌ INSUFFICIENT</span>
+                        </div>
+
+                        <div class="card">
+                            <h3>✅ Option 3: Comprehensive Automation (RECOMMENDED)</h3>
+                            <ul>
+                                <li><strong>Investment:</strong> $550K-850K</li>
+                                <li><strong>Outcome:</strong> 10x scalability, competitive advantage</li>
+                                <li><strong>Risk:</strong> Manageable with phased approach</li>
+                            </ul>
+                            <span class="status-indicator status-success">✅ STRONGLY RECOMMENDED</span>
+                        </div>
+
+                        <div class="card">
+                            <h3>🔄 Option 4: Rebuild from Scratch</h3>
+                            <ul>
+                                <li><strong>Investment:</strong> $1.5M-2M</li>
+                                <li><strong>Outcome:</strong> Perfect solution but delayed market response</li>
+                                <li><strong>Risk:</strong> Time-to-market too slow</li>
+                            </ul>
+                            <span class="status-indicator status-warning">❌ OVERKILL</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section id="conclusion" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>💡 Conclusion</h2>
+                    </div>
+
+                    <div class="highlight">
+                        <h3>The business is at a critical juncture.</h3>
+                        <p>The current manual processes are already failing to meet demand and will become completely unsustainable with projected growth.</p>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h4>❌ Failure to act will result in:</h4>
+                            <ul>
+                                <li>❌ Inability to grow the benefits program</li>
+                                <li>❌ Competitive disadvantage</li>
+                                <li>❌ User experience deterioration</li>
+                                <li>❌ Operational crisis</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h4>✅ Investment in automation will deliver:</h4>
+                            <ul>
+                                <li>✅ 10x scalability increase</li>
+                                <li>✅ Competitive advantage</li>
+                                <li>✅ Superior user experience</li>
+                                <li>✅ Sustainable growth model</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="highlight">
+                        <p><strong>The recommendation is clear: invest in comprehensive automation immediately.</strong> The cost of inaction far exceeds the investment required, and delays will only compound the problem.</p>
+                        <p><strong>This is not just an operational improvement - it's a strategic business imperative.</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <section class="section-anchor">
+                <div class="reports-section">
+                    <div class="section-header">
+                        <h2 class="section-title">📖 Related Reports</h2>
+                    </div>
+                    <div class="reports-grid">
+                        <div class="report-card">
+                            <div class="report-header">
+                                <div class="report-icon warning">
+                                    <i class="fas fa-heart-broken"></i>
+                                </div>
+                                <div>
+                                    <h3 class="report-title">Pain Point Report</h3>
+                                    <p class="report-subtitle">Critical Issues Analysis</p>
+                                </div>
+                            </div>
+                            <p class="report-description">Detailed breakdown of critical issues and prioritization matrix</p>
+                            <div class="report-actions">
+                                <a href="pain-report.html" class="action-btn">
+                                    <i class="fas fa-eye"></i> View Analysis
+                                </a>
+                            </div>
+                        </div>
+                        <div class="report-card">
+                            <div class="report-header">
+                                <div class="report-icon success">
+                                    <i class="fas fa-route"></i>
+                                </div>
+                                <div>
+                                    <h3 class="report-title">Journey Output</h3>
+                                    <p class="report-subtitle">As-Is Process Analysis</p>
+                                </div>
+                            </div>
+                            <p class="report-description">As-Is process mapping and transformation roadmap</p>
+                            <div class="report-actions">
+                                <a href="journey-output.html" class="action-btn">
+                                    <i class="fas fa-eye"></i> Explore Journey
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer style="margin-top: 4rem; padding: 2rem 0; text-align: center; border-top: 1px solid #f0f0f0; color: #666;">
+                <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+                    <a href="index.html" style="color: #1a1a1a; text-decoration: none; font-weight: 500;">← Back to Hub</a>
+                    <span style="color: #e0e0e0;">•</span>
+                    <a href="#" style="color: #666; text-decoration: none; font-size: 0.9rem;">Print Report</a>
+                    <span style="color: #e0e0e0;">•</span>
+                    <a href="#" style="color: #666; text-decoration: none; font-size: 0.9rem;">Share</a>
+                </div>
+                <p>📄 Raffles and Experiences Management - Problem Report</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+                    <span style="color: #1a1a1a;">Press Ctrl+H for home, Ctrl+P to print</span>
+                </p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

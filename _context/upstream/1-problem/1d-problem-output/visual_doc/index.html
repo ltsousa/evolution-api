@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffles and Experiences Management - Analysis Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard">
+    <!-- Header -->
+    <header class="navbar">
+        <div class="navbar-content">
+            <a href="#" class="navbar-brand">🎯 Raffles and Experiences Management</a>
+            <div class="navbar-actions">
+                <a href="#reports" class="btn btn-outline">View Reports</a>
+                <button class="btn btn-primary" onclick="window.print()">
+                    <i class="fas fa-download"></i> Export Analysis
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">95% Manual Dependency Crisis, Making Easy to Turn Scalability Challenges into Strategic Solutions.</h1>
+            <p class="hero-subtitle">Comprehensive analysis revealing critical business challenges and transformation opportunities with 150% ROI potential</p>
+            
+            <div class="export-section">
+                <button class="btn btn-primary" onclick="window.print()">
+                    <i class="fas fa-download"></i> Export Full Analysis
+                </button>
+                <button class="btn btn-outline" onclick="exportSection('reports')">
+                    <i class="fas fa-file-pdf"></i> Export Reports Only
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Final Result (Main Focus) -->
+            <div class="main-analysis-section">
+                <div class="final-result-card" onclick="navigateTo('reports')">
+                    <div class="final-result-category">STRATEGIC ANALYSIS COMPLETE</div>
+                    <h2 class="final-result-title">Business Transformation Roadmap</h2>
+                    <p class="final-result-description">Strategic reports revealing $550K-850K investment opportunity with 150% ROI and 10x scalability potential through comprehensive automation</p>
+                    <div class="final-result-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Overview -->
+            <div class="section-header">
+                <h2 class="section-title">Analysis Overview</h2>
+                <span class="explore-all">Critical Insights</span>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="card">
+                    <div class="card-category">BUSINESS IMPACT</div>
+                    <h3 class="card-title">Current State Crisis</h3>
+                    <p class="card-description">Analysis reveals critical scalability challenges with <strong>95% manual dependency</strong> across all processes, limiting growth potential and operational efficiency.</p>
+                    <div class="card-metrics">
+                        <div class="metric">
+                            <div class="metric-value">&lt;100</div>
+                            <div class="metric-label">MAX CAPACITY</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3-10 days</div>
+                            <div class="metric-label">PROCESSING TIME</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-meta">
+                        <span class="status-indicator status-critical">🔴 Critical Issues: 3</span>
+                        <a href="problem-report.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-category">CRITICAL ISSUES</div>
+                    <h3 class="card-title">Pain Points Analysis</h3>
+                    <p class="card-description">Identified <strong>12 major pain points</strong> across 5 strategic categories, with communication and automation challenges posing the highest business risk.</p>
+                    <div class="card-metrics">
+                        <div class="metric">
+                            <div class="metric-value">12</div>
+                            <div class="metric-label">PAIN POINTS</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3</div>
+                            <div class="metric-label">CRITICAL</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-meta">
+                        <span class="status-indicator status-high">🟡 High Priority</span>
+                        <a href="pain-report.html" class="btn btn-primary">Explore Issues</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-category">PROCESS MAPPING</div>
+                    <h3 class="card-title">Journey Analysis</h3>
+                    <p class="card-description">Comprehensive mapping of <strong>14 critical stages</strong> across Experience and Raffle processes, highlighting automation opportunities and transformation potential.</p>
+                    <div class="card-metrics">
+                        <div class="metric">
+                            <div class="metric-value">14</div>
+                            <div class="metric-label">STAGES</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">95%</div>
+                            <div class="metric-label">AUTOMATION POTENTIAL</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-meta">
+                        <span class="status-indicator status-medium">🔵 Process Stages: 14</span>
+                        <a href="journey-output.html" class="btn btn-primary">View Journey</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Executive Summary -->
+            <section id="metrics" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📈 Executive Summary</h2>
+                        <p class="card-subtitle">Key findings and strategic recommendations</p>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h4>🚨 Business Impact</h4>
+                            <ul>
+                                <li><strong>Growth Limitation:</strong> Current capacity &lt;100 simultaneous processes</li>
+                                <li><strong>Processing Time:</strong> 3-10 days vs. industry standard &lt;1 hour</li>
+                                <li><strong>Error Rate:</strong> 15-20% vs. industry standard &lt;1%</li>
+                                <li><strong>Automation Level:</strong> 5% vs. industry standard 80-90%</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h4>⚡ Transformation Potential</h4>
+                            <ul>
+                                <li><strong>Automation Opportunity:</strong> 95% of processes</li>
+                                <li><strong>Speed Improvement:</strong> 100x faster processing possible</li>
+                                <li><strong>Capacity Increase:</strong> 10x scalability with automation</li>
+                                <li><strong>ROI Projection:</strong> 150% over 3 years</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h4>🎯 Strategic Priorities</h4>
+                            <ol>
+                                <li><strong>Phase 1:</strong> Critical automation (0-3 months)</li>
+                                <li><strong>Phase 2:</strong> Process integration (3-6 months)</li>
+                                <li><strong>Phase 3:</strong> Advanced features (6-12 months)</li>
+                                <li><strong>Investment:</strong> $550K-850K total over 18 months</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Reports -->
+            <section class="reports-section" id="reports">
+                <div class="section-header">
+                    <h2 class="section-title">Strategic Reports</h2>
+                    <span class="explore-all">Final Analysis</span>
+                </div>
+                
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <div class="report-header">
+                            <div class="report-icon critical">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div>
+                                <h3 class="report-title">Problem Report</h3>
+                                <p class="report-subtitle">Business Challenge Analysis</p>
+                            </div>
+                        </div>
+                        <p class="report-description">Deep dive into the core <strong>scalability crisis</strong>, root causes, and business impact assessment with <strong>$550K-850K</strong> investment projection.</p>
+                        <div class="report-actions">
+                            <a href="problem-report.html" class="action-btn">
+                                <i class="fas fa-eye"></i> View Report
+                            </a>
+                            <a href="problem-report.html" class="action-btn" onclick="window.open(this.href); return false;">
+                                <i class="fas fa-external-link-alt"></i> Open
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div class="report-header">
+                            <div class="report-icon warning">
+                                <i class="fas fa-heart-broken"></i>
+                            </div>
+                            <div>
+                                <h3 class="report-title">Pain Point Report</h3>
+                                <p class="report-subtitle">Critical Issues Analysis</p>
+                            </div>
+                        </div>
+                        <p class="report-description">Detailed breakdown of <strong>12 major pain points</strong> across 5 strategic categories with <strong>3 critical issues</strong> demanding immediate action.</p>
+                        <div class="report-actions">
+                            <a href="pain-report.html" class="action-btn">
+                                <i class="fas fa-eye"></i> View Report
+                            </a>
+                            <a href="pain-report.html" class="action-btn" onclick="window.open(this.href); return false;">
+                                <i class="fas fa-external-link-alt"></i> Open
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div class="report-header">
+                            <div class="report-icon success">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <div>
+                                <h3 class="report-title">Journey Output</h3>
+                                <p class="report-subtitle">As-Is Process Analysis</p>
+                            </div>
+                        </div>
+                        <p class="report-description">Complete mapping of <strong>14 critical stages</strong> with automation opportunities and <strong>10x capacity increase</strong> potential through transformation.</p>
+                        <div class="report-actions">
+                            <a href="journey-output.html" class="action-btn">
+                                <i class="fas fa-eye"></i> View Report
+                            </a>
+                            <a href="journey-output.html" class="action-btn" onclick="window.open(this.href); return false;">
+                                <i class="fas fa-external-link-alt"></i> Open
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>⚡ Quick Actions</h2>
+                        <p class="card-subtitle">Essential next steps and key recommendations</p>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h4>🚨 Immediate Actions (Next 30 days)</h4>
+                            <ol>
+                                <li><strong>Approve Phase 1 investment</strong> to prevent operational crisis</li>
+                                <li><strong>Form dedicated transformation team</strong> with clear accountability</li>
+                                <li><strong>Establish baseline metrics</strong> for ROI measurement</li>
+                                <li><strong>Communicate urgency</strong> to all stakeholders</li>
+                            </ol>
+                            <div style="margin-top: 1rem;">
+                                <span class="status-indicator status-critical">🔥 URGENT</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h4>📋 Strategic Decisions Required</h4>
+                            <ul>
+                                <li><strong>Budget Approval:</strong> $550K-850K over 18 months</li>
+                                <li><strong>Resource Allocation:</strong> 4-6 FTE dedicated team</li>
+                                <li><strong>Timeline Commitment:</strong> 18-month transformation</li>
+                                <li><strong>Change Management:</strong> Process redesign and training</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h4>🎯 Success Metrics</h4>
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Metric</th>
+                                            <th>Current</th>
+                                            <th>Target</th>
+                                            <th>Improvement</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Processing Time</td>
+                                            <td>3-10 days</td>
+                                            <td>&lt;30 minutes</td>
+                                            <td><span class="status-indicator status-success">⚡ 100x faster</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Volume Capacity</td>
+                                            <td>&lt;100</td>
+                                            <td>10,000+</td>
+                                            <td><span class="status-indicator status-success">🚀 100x increase</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Automation Level</td>
+                                            <td>5%</td>
+                                            <td>95%</td>
+                                            <td><span class="status-indicator status-success">⚙️ 18x improvement</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Error Rate</td>
+                                            <td>15-20%</td>
+                                            <td>&lt;1%</td>
+                                            <td><span class="status-indicator status-success">✅ 95% reduction</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer style="margin-top: 4rem; padding: 2rem 0; text-align: center; border-top: 1px solid #f0f0f0; color: #666;">
+                <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+                    <a href="#" style="color: #666; text-decoration: none; font-size: 0.9rem;">Documentation</a>
+                    <span style="color: #e0e0e0;">•</span>
+                    <a href="#" style="color: #666; text-decoration: none; font-size: 0.9rem;">Analysis Guide</a>
+                    <span style="color: #e0e0e0;">•</span>
+                    <a href="#" style="color: #666; text-decoration: none; font-size: 0.9rem;">Export Options</a>
+                </div>
+                <p>📄 Raffles and Experiences Management - Visual Documentation Hub</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+                    Generated with Agent 6: Visual Documentation Generator | 
+                    <span style="color: #1a1a1a;">Press Ctrl+H for home, Ctrl+P to print</span>
+                </p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Navigation functions
+        function navigateTo(section) {
+            const routes = {
+                'reports': '#reports'
+            };
+            
+            if (routes[section]) {
+                if (section === 'reports') {
+                    document.getElementById('reports').scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+
+        // Export functions
+        function exportSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const printWindow = window.open('', '', 'width=800,height=600');
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Raffles and Experiences Management - ${sectionId}</title>
+                        <style>${document.querySelector('style') ? document.querySelector('style').textContent : ''}</style>
+                        <link rel="stylesheet" href="styles.css">
+                    </head>
+                    <body>${section.outerHTML}</body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        // Add hover effects for cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('final-result-card')) {
+                    this.style.transform = 'translateY(-4px)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('final-result-card')) {
+                    this.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

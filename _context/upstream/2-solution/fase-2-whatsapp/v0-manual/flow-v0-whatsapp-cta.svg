@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .card { fill: #FFFFFF; stroke: #1F2937; stroke-width: 2; rx: 12; }
+      .note { fill: #F9FAFB; stroke: #D1D5DB; stroke-width: 1.5; rx: 10; }
+      .title { font: 700 20px Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .text { font: 400 16px Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #374151; }
+      .small { font: 400 14px Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #4B5563; }
+      .arrow { stroke: #111827; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+      .label { font: 600 14px Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .diamond { fill: #FFFFFF; stroke: #1F2937; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827" />
+    </marker>
+  </defs>
+
+  <!-- Row 1 -->
+  <g transform="translate(80,60)">
+    <rect class="card" width="420" height="110"/>
+    <text class="title" x="16" y="36">Cliente recebe comunicação de premiação</text>
+    <text class="small" x="16" y="66">E-mail / SMS / Push com CTA</text>
+  </g>
+  <g transform="translate(560,60)">
+    <rect class="card" width="460" height="110"/>
+    <text class="title" x="16" y="36">CTA abre WhatsApp com texto pré-preenchido</text>
+    <text class="small" x="16" y="66">“Fui contemplado no sorteio NOME_DO_SORTEIO com o número NUMERO”</text>
+  </g>
+  <g transform="translate(1080,60)">
+    <rect class="card" width="420" height="110"/>
+    <text class="title" x="16" y="36">Cliente envia mensagem no WhatsApp</text>
+  </g>
+
+  <!-- Arrows Row 1 -->
+  <path class="arrow" d="M500,115 L560,115"/>
+  <path class="arrow" d="M1020,115 L1080,115"/>
+
+  <!-- Decision: Sinais de fraude?  from Cliente envia msg down to left diamond -->
+  <g transform="translate(1080,230)">
+    <polygon class="diamond" points="140,0 280,70 140,140 0,70"/>
+    <text class="title" x="36" y="64">Sinais de fraude?</text>
+  </g>
+  <path class="arrow" d="M1290,170 L1290,230"/>
+  <text class="label" x="1300" y="205">avaliação</text>
+
+  <!-- Fraud Yes box (right) -->
+  <g transform="translate(1380,220)">
+    <rect class="note" width="420" height="120"/>
+    <text class="title" x="16" y="36">Escalar imediatamente</text>
+    <text class="small" x="16" y="64">Escalar ao supervisor antes de prosseguir</text>
+  </g>
+  <path class="arrow" d="M1360,300 L1380,280"/>
+  <text class="label" x="1366" y="268">Sim</text>
+
+  <!-- From decision to validation diamond (No) -->
+  <path class="arrow" d="M1220,300 L980,300"/>
+  <text class="label" x="1100" y="290">Não</text>
+
+  <!-- Decision: Mensagem contém NOME e NÚMERO? -->
+  <g transform="translate(680,230)">
+    <polygon class="diamond" points="120,0 240,70 120,140 0,70"/>
+    <text class="title" x="10" y="64">Mensagem contém</text>
+    <text class="title" x="34" y="88">NOME e NÚMERO?</text>
+  </g>
+
+  <!-- Left branch: Não -> Solicitar reenvio -->
+  <g transform="translate(340,220)">
+    <rect class="note" width="300" height="120"/>
+    <text class="title" x="16" y="36">Solicitar reenvio</text>
+    <text class="small" x="16" y="64">No formato do CTA</text>
+  </g>
+  <path class="arrow" d="M680,300 L640,300"/>
+  <text class="label" x="650" y="290">Não</text>
+
+  <!-- Right branch: Sim -> Responder naturalmente -->
+  <g transform="translate(980,420)">
+    <rect class="card" width="380" height="110"/>
+    <text class="title" x="16" y="36">Responder de forma natural</text>
+    <text class="small" x="16" y="66">Parabenização + solicitação de nome completo e e-mail</text>
+  </g>
+  <path class="arrow" d="M920,300 C960,360 1040,360 1120,420"/>
+  <text class="label" x="946" y="344">Sim</text>
+
+  <!-- Coletar dados -->
+  <g transform="translate(980,580)">
+    <rect class="card" width="380" height="100"/>
+    <text class="title" x="16" y="36">Coletar dados</text>
+    <text class="small" x="16" y="66">Nome completo e e-mail do ganhador</text>
+  </g>
+  <path class="arrow" d="M1170,530 L1170,580"/>
+
+  <!-- Conduzir próximos passos -->
+  <g transform="translate(980,720)">
+    <rect class="card" width="380" height="100"/>
+    <text class="title" x="16" y="36">Conduzir próximos passos</text>
+    <text class="small" x="16" y="66">Explicar procedimentos conforme regras internas</text>
+  </g>
+  <path class="arrow" d="M1170,680 L1170,720"/>
+
+
+
+  <!-- Diretrizes de atendimento side panel -->
+  <g transform="translate(80,780)">
+    <rect class="note" width="520" height="220"/>
+    <text class="title" x="16" y="36">Diretrizes de Atendimento</text>
+    <text class="text" x="16" y="70">• Atendimento natural e livre (sem templates)</text>
+    <text class="text" x="16" y="98">• Focar em: parabenizar, confirmar dados, próximos passos</text>
+    <text class="text" x="16" y="126">• Coletar: nome completo e e-mail</text>
+    <text class="text" x="16" y="154">• Escalar suspeitas de fraude imediatamente</text>
+    <text class="text" x="16" y="182">• Time se organiza internamente no WhatsApp</text>
+  </g>
+
+  <!-- SLAs e Qualidade side panel -->
+  <g transform="translate(640,780)">
+    <rect class="note" width="300" height="220"/>
+    <text class="title" x="16" y="36">SLAs e Qualidade (V0)</text>
+    <text class="text" x="16" y="70">• 1ª resposta até 2 horas úteis</text>
+    <text class="text" x="16" y="98">• Atendimento natural (sem templates)</text>
+    <text class="text" x="16" y="126">• Foco na experiência do cliente</text>
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(80,16)">
+    <text class="title" x="0" y="0">V0 Manual — WhatsApp Proativo (CTA)</text>
+    <text class="small" x="0" y="22">Atendimento natural e livre, sem templates ou organização estruturada</text>
+  </g>
+</svg>

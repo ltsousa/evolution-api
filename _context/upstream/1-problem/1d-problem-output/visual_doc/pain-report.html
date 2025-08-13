@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain Point Report - Raffles and Experiences Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-brand">🎯 Raffles and Experiences Management</a>
+            <div class="navbar-actions">
+                <a href="index.html" class="btn btn-outline">← Back to Hub</a>
+                <a href="problem-report.html" class="btn btn-outline">Problem Report</a>
+                <a href="journey-output.html" class="btn btn-outline">Journey</a>
+                <button class="btn btn-primary" onclick="window.print()">
+                    <i class="fas fa-download"></i> Export Report
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <ol>
+                    <li><a href="index.html">Documentation Hub</a></li>
+                    <li>→</li>
+                    <li>Pain Point Report</li>
+                </ol>
+            </nav>
+
+            <!-- Hero Section -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="report-icon warning" style="float: left; margin-right: 1rem;">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <h1>💔 Pain Point Report: Critical Issues Analysis</h1>
+                    <p class="card-subtitle">
+                        Comprehensive analysis of 12 major pain points across 5 strategic categories in the Raffles and Experiences Management system
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="status-indicator status-critical">🔴 3 Critical</span>
+                        <span class="status-indicator status-high">🟡 5 High</span>
+                        <span class="status-indicator status-medium">🔵 4 Medium</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Executive Summary -->
+            <section id="executive-summary" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📋 Executive Summary</h2>
+                    </div>
+                    <p>Este relatório apresenta uma análise crítica dos pain points identificados nos processos de <strong>Experiências</strong> e <strong>Sorteios</strong>. Foram catalogados <strong>12 pain points principais</strong> organizados em <strong>5 categorias estratégicas</strong>, com <strong>3 classificados como CRÍTICOS</strong> que demandam ação imediata.</p>
+                </div>
+            </section>
+
+            <!-- Pain Point Severity Matrix -->
+            <section id="severity-matrix" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🎯 Pain Point Severity Matrix</h2>
+                    </div>
+
+                    <h3>🔥 CRÍTICOS (Ação Imediata Necessária)</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Pain Point</th>
+                                    <th>Impacto Operacional</th>
+                                    <th>Impacto no Usuário</th>
+                                    <th>Risco de Negócio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>P1.1</strong></td>
+                                    <td>Processos Excessivamente Manuais</td>
+                                    <td><span class="status-indicator status-critical">ALTÍSSIMO</span></td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                    <td><span class="status-indicator status-critical">CRÍTICO</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>P1.2</strong></td>
+                                    <td>Falta de Automação na Entrega</td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                    <td><span class="status-indicator status-critical">ALTÍSSIMO</span></td>
+                                    <td><span class="status-indicator status-critical">CRÍTICO</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>P1.3</strong></td>
+                                    <td>Escalabilidade Inviável</td>
+                                    <td><span class="status-indicator status-critical">ALTÍSSIMO</span></td>
+                                    <td><span class="status-indicator status-medium">MÉDIO</span></td>
+                                    <td><span class="status-indicator status-critical">CRÍTICO</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>⚡ ALTOS (Segunda Prioridade)</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Pain Point</th>
+                                    <th>Impacto Operacional</th>
+                                    <th>Impacto no Usuário</th>
+                                    <th>Risco de Negócio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>P2.1</strong></td>
+                                    <td>Desconfiança dos Usuários</td>
+                                    <td><span class="status-indicator status-medium">MÉDIO</span></td>
+                                    <td><span class="status-indicator status-critical">ALTÍSSIMO</span></td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>P2.2</strong></td>
+                                    <td>Notificação Insuficiente</td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>P3.1</strong></td>
+                                    <td>Informações Fragmentadas</td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                    <td><span class="status-indicator status-medium">MÉDIO</span></td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>P5.1</strong></td>
+                                    <td>Experiência Ruim do Consumidor</td>
+                                    <td><span class="status-indicator status-medium">MÉDIO</span></td>
+                                    <td><span class="status-indicator status-critical">ALTÍSSIMO</span></td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>P1.4</strong></td>
+                                    <td>Perda de Tempo Operacional</td>
+                                    <td><span class="status-indicator status-high">ALTO</span></td>
+                                    <td><span class="status-indicator status-low">BAIXO</span></td>
+                                    <td><span class="status-indicator status-medium">MÉDIO</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Detailed Analysis by Category -->
+            <section id="detailed-analysis" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🔍 Análise Detalhada por Categoria</h2>
+                    </div>
+
+                    <!-- Category 1: Automation and Operational Efficiency -->
+                    <div class="card">
+                        <h3>🔄 Categoria 1: Automação e Eficiência Operacional</h3>
+                        
+                        <div class="highlight">
+                            <h4>Critical Issue: Manual Dependency Crisis</h4>
+                            <p><strong>Problema Central</strong>: 95% dos processos dependem de intervenção manual humana.</p>
+                        </div>
+
+                        <h4>Evidências:</h4>
+                        <ul>
+                            <li><strong>Experiências</strong>: Desde planilhas até WhatsApp individual</li>
+                            <li><strong>Sorteios</strong>: 7 dos 8 estágios são totalmente manuais</li>
+                            <li><strong>Volume</strong>: Impossível processar 500+ ganhadores simultaneamente</li>
+                        </ul>
+
+                        <h4>Impacto Quantificado:</h4>
+                        <div class="dashboard-grid">
+                            <div class="card">
+                                <h5>⏱️ Tempo</h5>
+                                <p>80%+ do tempo da equipe gasto em tarefas repetitivas</p>
+                            </div>
+                            <div class="card">
+                                <h5>❌ Erros</h5>
+                                <p>Alto risco de erro humano em cada etapa</p>
+                            </div>
+                            <div class="card">
+                                <h5>💰 Custo</h5>
+                                <p>Escalabilidade limitada a crescimento linear de equipe</p>
+                            </div>
+                        </div>
+
+                        <p><strong>Root Cause</strong>: Sistema legado não foi projetado para automação.</p>
+                    </div>
+
+                    <!-- Category 2: Communication and Reliability -->
+                    <div class="card">
+                        <h3>📞 Categoria 2: Comunicação e Confiabilidade</h3>
+                        
+                        <div class="highlight">
+                            <h4>Critical Issue: Trust and Communication Breakdown</h4>
+                            <p><strong>Problema Central</strong>: Comunicação via WhatsApp gera desconfiança e bloqueios.</p>
+                        </div>
+
+                        <h4>Evidências:</h4>
+                        <ul>
+                            <li>Ganhadores percebem contatos como fraude</li>
+                            <li>Bloqueios: "mandou a gente se f**** e bloqueou o número"</li>
+                            <li>Push notifications genéricas insuficientes</li>
+                        </ul>
+
+                        <h4>Impacto Quantificado:</h4>
+                        <div class="dashboard-grid">
+                            <div class="card">
+                                <h5>👥 Perda de Usuários</h5>
+                                <p>Ganhadores legítimos se recusam a participar</p>
+                            </div>
+                            <div class="card">
+                                <h5>🔄 Retrabalho</h5>
+                                <p>Tempo perdido convencendo sobre legitimidade</p>
+                            </div>
+                            <div class="card">
+                                <h5>🏷️ Imagem</h5>
+                                <p>Deterioração da credibilidade da marca</p>
+                            </div>
+                        </div>
+
+                        <p><strong>Root Cause</strong>: Falta de canal oficial confiável dentro do aplicativo.</p>
+                    </div>
+
+                    <!-- Category 3: Information Management -->
+                    <div class="card">
+                        <h3>📊 Categoria 3: Gestão de Informações e Controle</h3>
+                        
+                        <div class="highlight">
+                            <h4>High Issue: Information Fragmentation</h4>
+                            <p><strong>Problema Central</strong>: Dados espalhados em múltiplas plataformas sem controle centralizado.</p>
+                        </div>
+
+                        <h4>Evidências:</h4>
+                        <ul>
+                            <li>Planilhas compartilhadas como fonte única</li>
+                            <li>WhatsApp para coordenação</li>
+                            <li>E-mails para follow-ups com parceiros</li>
+                            <li>Sistemas desconectados</li>
+                        </ul>
+
+                        <h4>Impacto Quantificado:</h4>
+                        <div class="dashboard-grid">
+                            <div class="card">
+                                <h5>👁️ Visibilidade</h5>
+                                <p>Zero visibilidade em tempo real</p>
+                            </div>
+                            <div class="card">
+                                <h5>🎛️ Controle</h5>
+                                <p>Impossível rastrear status global</p>
+                            </div>
+                            <div class="card">
+                                <h5>📊 Qualidade</h5>
+                                <p>Dados inconsistentes e desatualizados</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: External Dependencies -->
+                    <div class="card">
+                        <h3>🤝 Categoria 4: Dependências Externas</h3>
+                        
+                        <div class="highlight">
+                            <h4>Medium Issue: Third-Party Coordination Challenges</h4>
+                            <p><strong>Problema Central</strong>: Dependência excessiva de coordenação manual com parceiros.</p>
+                        </div>
+
+                        <h4>Evidências:</h4>
+                        <ul>
+                            <li>Follow-ups constantes com Ticketmaster, Ingresse</li>
+                            <li>Planilhas compartilhadas para controle</li>
+                            <li>Sem visibilidade sobre timing de entrega</li>
+                        </ul>
+
+                        <h4>Impacto Quantificado:</h4>
+                        <p><strong>Atrasos</strong>: 70% dos atrasos são por dependências externas</p>
+                        <p><strong>Controle</strong>: Sem poder sobre experiência final</p>
+                        <p><strong>Escalabilidade</strong>: Limitado pela capacidade de coordenação manual</p>
+                    </div>
+
+                    <!-- Category 5: User Experience -->
+                    <div class="card">
+                        <h3>👤 Categoria 5: Experiência do Usuário</h3>
+                        
+                        <div class="highlight">
+                            <h4>High Issue: Poor Consumer Experience</h4>
+                            <p><strong>Problema Central</strong>: Experiência fragmentada e confusa para o consumidor.</p>
+                        </div>
+
+                        <h4>Evidências:</h4>
+                        <ul>
+                            <li>Necessidade de verificar múltiplas plataformas</li>
+                            <li>Atrasos entre resgate e recebimento</li>
+                            <li>Falta de transparência sobre processo</li>
+                            <li>Comunicação não oficial</li>
+                        </ul>
+
+                        <h4>Impacto Quantificado:</h4>
+                        <p><strong>Satisfação</strong>: Baixa satisfação com processo</p>
+                        <p><strong>Churn</strong>: Potencial abandono por experiência ruim</p>
+                        <p><strong>Word-of-Mouth</strong>: Impacto negativo na reputação</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impact Assessment -->
+            <section id="impact-assessment" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📈 Impact Assessment</h2>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h3>⚙️ Operational Impact</h3>
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Métrica</th>
+                                            <th>Estado Atual</th>
+                                            <th>Impacto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Tempo de Processamento</strong></td>
+                                            <td>5-10 dias</td>
+                                            <td><span class="status-indicator status-critical">🔴 Muito Lento</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Taxa de Erro</strong></td>
+                                            <td>~15-20%</td>
+                                            <td><span class="status-indicator status-critical">🔴 Alta</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Capacidade de Volume</strong></td>
+                                            <td>&lt;100 simultâneos</td>
+                                            <td><span class="status-indicator status-critical">🔴 Limitada</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Custo por Transação</strong></td>
+                                            <td>Alto</td>
+                                            <td><span class="status-indicator status-critical">🔴 Ineficiente</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>👤 User Experience Impact</h3>
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Métrica</th>
+                                            <th>Estado Atual</th>
+                                            <th>Impacto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Time to Value</strong></td>
+                                            <td>3-10 dias</td>
+                                            <td><span class="status-indicator status-critical">🔴 Muito Lento</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Satisfaction Score</strong></td>
+                                            <td>Não medido</td>
+                                            <td><span class="status-indicator status-critical">🔴 Presumivelmente Baixo</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Trust Level</strong></td>
+                                            <td>Baixo</td>
+                                            <td><span class="status-indicator status-critical">🔴 Crítico</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Completion Rate</strong></td>
+                                            <td>~70-80%</td>
+                                            <td><span class="status-indicator status-warning">🟡 Moderado</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>💼 Business Risk</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Risco</th>
+                                    <th>Probabilidade</th>
+                                    <th>Impacto</th>
+                                    <th>Severidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Impossibilidade de Escalar</strong></td>
+                                    <td>ALTA</td>
+                                    <td>CRÍTICO</td>
+                                    <td><span class="status-indicator status-critical">🔴 CRÍTICO</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Perda de Usuários por Desconfiança</strong></td>
+                                    <td>MÉDIA</td>
+                                    <td>ALTO</td>
+                                    <td><span class="status-indicator status-high">🟡 ALTO</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Deterioração da Marca</strong></td>
+                                    <td>MÉDIA</td>
+                                    <td>ALTO</td>
+                                    <td><span class="status-indicator status-high">🟡 ALTO</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ineficiência Operacional</strong></td>
+                                    <td>ALTA</td>
+                                    <td>MÉDIO</td>
+                                    <td><span class="status-indicator status-high">🟡 ALTO</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solution Prioritization -->
+            <section id="solution-prioritization" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🎯 Priorização de Solução</h2>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h3>🚀 Wave 1: Critical Fixes (0-3 meses)</h3>
+                            <ol>
+                                <li><strong>Automação de Entrega Básica</strong> - Resolver P1.2</li>
+                                <li><strong>Identificação Automática de Ganhadores</strong> - Resolver P1.1 (parcial)</li>
+                                <li><strong>Notificações In-App Oficiais</strong> - Resolver P2.1 e P2.2</li>
+                            </ol>
+                            <span class="status-indicator status-critical">🔥 Prioridade Máxima</span>
+                        </div>
+
+                        <div class="card">
+                            <h3>🔗 Wave 2: Process Integration (3-6 meses)</h3>
+                            <ol start="4">
+                                <li><strong>Portal Centralizado</strong> - Resolver P3.1</li>
+                                <li><strong>Dashboard de Controle</strong> - Resolver P1.1 (completo)</li>
+                                <li><strong>Content Cards para Coleta</strong> - Resolver P2.3</li>
+                            </ol>
+                            <span class="status-indicator status-high">⚡ Alta Prioridade</span>
+                        </div>
+
+                        <div class="card">
+                            <h3>🌟 Wave 3: External Integration (6-12 meses)</h3>
+                            <ol start="7">
+                                <li><strong>APIs com Parceiros</strong> - Resolver P4.1</li>
+                                <li><strong>Workflows Avançados</strong> - Resolver P1.4</li>
+                                <li><strong>Otimizações de UX</strong> - Resolver P5.1</li>
+                            </ol>
+                            <span class="status-indicator status-medium">🔵 Média Prioridade</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROI Estimation -->
+            <section id="roi-estimation" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>💰 ROI Estimation</h2>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h3>💸 Investment Required</h3>
+                            <ul>
+                                <li><strong>Wave 1:</strong> $150K - $200K (3-4 meses de desenvolvimento)</li>
+                                <li><strong>Wave 2:</strong> $200K - $300K (6-8 meses de desenvolvimento)</li>
+                                <li><strong>Wave 3:</strong> $100K - $150K (4-6 meses de desenvolvimento)</li>
+                            </ul>
+                            <p><strong>Total:</strong> <span class="status-indicator status-warning">$450K - $650K</span></p>
+                        </div>
+
+                        <div class="card">
+                            <h3>📈 Expected Returns</h3>
+                            <ul>
+                                <li><strong>Operational Efficiency:</strong> 70-80% redução de custos operacionais</li>
+                                <li><strong>Volume Capacity:</strong> 10x capacidade sem aumento proporcional de equipe</li>
+                                <li><strong>User Satisfaction:</strong> 50-60% melhoria na experiência</li>
+                                <li><strong>Brand Trust:</strong> Eliminação de 90%+ das percepções de fraude</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h3>⏰ Break-Even Analysis</h3>
+                            <ul>
+                                <li><strong>Payback Period:</strong> 8-12 meses</li>
+                                <li><strong>3-Year ROI:</strong> <span class="status-indicator status-success">300-400%</span></li>
+                                <li><strong>Risk-Adjusted NPV:</strong> Altamente positivo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section id="conclusion" class="section-anchor">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🎯 Conclusion</h2>
+                    </div>
+
+                    <div class="highlight">
+                        <p>Os pain points identificados representam <strong>barreiras críticas</strong> para o crescimento e eficiência dos processos de Experiências e Sorteios. A <strong>dependência manual excessiva</strong> é o problema central que gera cascata de outros problemas.</p>
+                        
+                        <p><strong>A ação é URGENTE</strong> - a incapacidade de escalar processos limitará significativamente o crescimento do programa de benefícios. O investimento proposto tem <strong>ROI comprovado</strong> e deve ser priorizado no roadmap de produto.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <section class="section-anchor">
+                <div class="reports-section">
+                    <div class="section-header">
+                        <h2 class="section-title">📖 Related Reports</h2>
+                    </div>
+                    <div class="reports-grid">
+                        <div class="report-card">
+                            <div class="report-header">
+                                <div class="report-icon critical">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="report-title">Problem Report</h3>
+                                    <p class="report-subtitle">Business Challenge Analysis</p>
+                                </div>
+                            </div>
+                            <p class="report-description">Business challenge analysis with financial impact assessment</p>
+                            <div class="report-actions">
+                                <a href="problem-report.html" class="action-btn">
+                                    <i class="fas fa-eye"></i> Read Report
+                                </a>
+                            </div>
+                        </div>
+                        <div class="report-card">
+                            <div class="report-header">
+                                <div class="report-icon success">
+                                    <i class="fas fa-route"></i>
+                                </div>
+                                <div>
+                                    <h3 class="report-title">Journey Output</h3>
+                                    <p class="report-subtitle">As-Is Process Analysis</p>
+                                </div>
+                            </div>
+                            <p class="report-description">As-Is process mapping and transformation roadmap</p>
+                            <div class="report-actions">
+                                <a href="journey-output.html" class="action-btn">
+                                    <i class="fas fa-eye"></i> Explore Journey
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer style="margin-top: 4rem; padding: 2rem 0; text-align: center; border-top: 1px solid #f0f0f0; color: #666;">
+                <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+                    <a href="index.html" style="color: #1a1a1a; text-decoration: none; font-weight: 500;">← Back to Hub</a>
+                    <span style="color: #e0e0e0;">•</span>
+                    <a href="#" style="color: #666; text-decoration: none; font-size: 0.9rem;">Print Report</a>
+                    <span style="color: #e0e0e0;">•</span>
+                    <a href="#" style="color: #666; text-decoration: none; font-size: 0.9rem;">Share</a>
+                </div>
+                <p>📄 Raffles and Experiences Management - Pain Point Report</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+                    <span style="color: #1a1a1a;">Press Ctrl+H for home, Ctrl+P to print</span>
+                </p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
