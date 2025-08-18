@@ -1,0 +1,84 @@
+2025-08-18 13:23:12.11
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:12.11
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:12.15
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:12.15
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:12.29
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:12.29
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:12.46
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:12.46
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:12.76
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:12.76
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:13.95
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:13.95
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:15.90
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:15.90
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:21.69
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:21.69
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:30.68
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:30.68
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:37.18
+730fa6eb
+User
+sh: 1: python3: not found
+2025-08-18 13:23:37.18
+730fa6eb
+System
+command finished with error [sh -c python3 -m uvicorn app.main:app --host 0.0.0.0 --port 3000]: exit status 127
+2025-08-18 13:23:43.54
+730fa6eb
+System
+crash loop detected

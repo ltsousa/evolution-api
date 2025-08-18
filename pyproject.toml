@@ -18,6 +18,7 @@ dependencies = [
     "structlog>=23.2.0",
     "tenacity>=8.2.3",
     "pydantic>=2.5.0",
+    "pydantic-settings>=2.2.1",   # <- ADICIONE ESTA LINHA
     "aiosqlite>=0.19.0",
     "cachetools>=5.3.2",
 ]
@@ -70,3 +71,10 @@ module = [
     "cachetools.*",
 ]
 ignore_missing_imports = true
+
+[tool.setuptools]
+# opcional: manter compat com versões antigas
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["tests*", "attached_assets*", "docs*", "examples*"]
