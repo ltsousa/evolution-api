@@ -86,24 +86,34 @@ async def _process_message(data: Dict[str, Any], request_id: str) -> None:
         # Extrair dados da mensagem
         message_data = data.get("data", {})
         
-        # Verificar se é mensagem de texto
-        if message_data.get("type") != "text":
-            print(f"❌ MENSAGEM NÃO É DE TEXTO: {message_data.get('type')}")
-            logger.debug("Mensagem não é de texto", type=message_data.get("type"))
+        # Verificar se é mensagem de texto (Evolution API usa messageType)
+        message_type = message_data.get("messageType", "")
+        if message_type not in ["conversation", "extendedTextMessage"]:
+            print(f"❌ MENSAGEM NÃO É DE TEXTO: {message_type}")
+            logger.debug("Mensagem não é de texto", messageType=message_type)
             return
         
-        print(f"✅ MENSAGEM É DE TEXTO: {message_data.get('type')}")
+        print(f"✅ MENSAGEM É DE TEXTO: {message_type}")
         
         # Normalizar para DTO interno
+        message_content = message_data.get("message", {})
+        
+        # Extrair texto baseado no tipo de mensagem
+        text = ""
+        if message_type == "conversation":
+            text = message_content.get("conversation", "")
+        elif message_type == "extendedTextMessage":
+            text = message_content.get("extendedTextMessage", {}).get("text", "")
+        
         message = IncomingMessage(
             id=message_data.get("key", {}).get("id", ""),
             from_number=message_data.get("key", {}).get("remoteJid", ""),
             to_number="bot",  # Sempre será o bot quando recebemos mensagem
-            text=message_data.get("message", {}).get("conversation", ""),
+            text=text,
             timestamp=datetime.fromtimestamp(
                 int(message_data.get("messageTimestamp", 0))
             ),
-            type=message_data.get("type", ""),
+            type=message_type,
             raw_data=data
         )
         
