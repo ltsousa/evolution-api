@@ -2,16 +2,11 @@
 run = [
   "sh",
   "-c",
-  "uv run --python 3.12 uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-3000} --workers 1 --proxy-headers --forwarded-allow-ips='*' --log-level info",
+  "python run.py",
 ]
-build = ["sh", "-c", "uv sync"]
+build = ["sh", "-c", "pip install -r requirements.txt"]
 
 deploymentTarget = "cloudrun"
-
-# REMOVA a linha abaixo (não é necessária com Nix e às vezes confunde o builder)
-# modules = ["python-3.12"]
-
-build = ["sh", "-c", "uv sync"]
 
 [agent]
 expertMode = true
@@ -41,7 +36,7 @@ outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "uv sync && uv run --python 3.12 python -m app.main"
+args = "python run.py"
 waitForPort = 5000
 
 [[ports]]

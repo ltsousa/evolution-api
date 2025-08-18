@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     webhook_secret: Optional[str] = Field(None, env="WEBHOOK_SECRET")
     
     # Servidor
-    port: int = Field(default=8080, env="PORT")
+    port: int = Field(default=5000, env="PORT")
     
     # Segurança
     internal_api_token: str = Field(..., env="INTERNAL_API_TOKEN")
