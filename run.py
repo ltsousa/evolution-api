@@ -6,8 +6,8 @@ import os
 from app.config import settings
 
 if __name__ == "__main__":
-    # Use PORT from environment, then settings.port, then fallback to 5000 (Replit recommended port)
-    port = int(os.getenv("PORT") or getattr(settings, 'port', None) or 5000)
+    # Force port 5000 for deployment consistency with .replit configuration
+    port = 5000
     
     print("🚀 Iniciando Evolution API Bot...")
     print(f"📡 Servidor rodando em: http://0.0.0.0:{port}")
