@@ -83,8 +83,8 @@ async def _process_message(data: Dict[str, Any], request_id: str) -> None:
         print(f"🔍 PROCESSANDO MENSAGEM: {data}")  # Log simples para debug
         logger.info("Processando mensagem recebida", data=data, request_id=request_id)
         
-        # Extrair dados da mensagem
-        message_data = data.get("data", {})
+        # Extrair dados da mensagem (estrutura do Evolution API)
+        message_data = data
         
         # Verificar se é mensagem de texto (Evolution API usa messageType)
         message_type = message_data.get("messageType", "")
